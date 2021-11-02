@@ -1,0 +1,38 @@
+{
+    "env": {
+        "browser": true,
+        "es2021": true,
+        "jest/globals": true
+    },
+    "extends": [
+        "plugin:react/recommended",
+        "airbnb",
+        "plugin:cypress/recommended"
+    ],
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": 12,
+        "sourceType": "module"
+    },
+    "plugins": [
+        "react",
+        "jest",
+        "cypress",
+        "prefer-arrow"
+    ],
+    "rules": {
+        "linebreak-style": "off",
+        "react/jsx-props-no-spreading": "off",
+        "no-unused-vars": "error",
+        "prefer-arrow/prefer-arrow-functions": [
+            "error",
+            {
+              "disallowPrototype": true,
+              "singleReturnOnly": false,
+              "classPropertiesAllowed": false
+            }
+          ]
+    }
+}
