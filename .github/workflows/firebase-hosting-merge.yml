@@ -28,8 +28,29 @@ jobs:
       - name: Lints
         run: npx eslint **/*.jsx
 
-  build_and_deploy:
+  test:
     needs: lint
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v2
+
+      - name: Installs Node js
+        uses: actions/setup-node@v1
+        with:
+          node-version: 14.x
+
+      - name: Install dependencies
+        run: npm install 
+        
+      - name: Test
+        run: CI=true npm test
+
+  build_and_deploy:
+    needs: test
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
