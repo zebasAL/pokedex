@@ -172,7 +172,8 @@ div.hidden {
 
 .pokemons-wrapper .pokemon-details img {
   max-height: none;
-  object-fit: fill;
+  object-fit: contain;
+  width: 100%;
   padding: 2px;
 }
 
