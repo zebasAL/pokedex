@@ -33,6 +33,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+            - name: Installs Node js
+        uses: actions/setup-node@v1
+        with:
+          node-version: 14.x
       - run: npm ci & npm run build
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
