@@ -45,15 +45,13 @@
   .switch-background .switch-off {
     width: 18px;
     height: 18px;
-    margin: 0 0 0 -3px;
-    box-shadow: none;
+    margin: 0 -1px;
   }
   
   .switch-background .switch-on {
     width: 18px;
     height: 18px;
-    margin: 0 0 0 14px;
-    box-shadow: none;
+    margin: 0 0 0 11px;
   }
   
 }
