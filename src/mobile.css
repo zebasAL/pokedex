@@ -10,6 +10,10 @@
     background-color: #f2f2f2;
   }
 
+  div.hidden {
+    padding-top: 50px;
+  }
+
   .pokemons-cards-container .pokemons-wrapper {
     width: calc(33% - 10px);
     margin: 10px 5px;
@@ -19,16 +23,12 @@
     padding: 6px 30px 6px 30px;
   }
 
-  .pokemons-cards-container {
-    padding-top: 50px;    
-  }
-
   .pokemons-cards-container .pokemon-details p {
     margin: 0 5px 10px 5px;
-}
+  }
 
   .pokemon-card-description {
-    font-size: 2.5vw;
+    font-size: 3vw;
     margin: 0;
   }
 

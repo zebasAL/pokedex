@@ -2,7 +2,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const PokemonFullCard = ({
+const Card = ({
   children,
 }) => (
   <div className="pokemon-card-wrapper">
@@ -10,8 +10,8 @@ const PokemonFullCard = ({
   </div>
 );
 
-PokemonFullCard.propTypes = {
+Card.propTypes = {
   children: PropTypes.node.isRequired,
 };
 
-export default PokemonFullCard;
+export default Card;

@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { toast } from 'react-toast';
-import PokemonFullCard from '../components/PokemonFullCard';
+import Card from '../components/Card';
 import api from '../api';
 import { mockPokemonData, mockPokemonSpecies } from '../mockedData';
-import PokemonSmallCard from '../components/ui/PokemonSmallCard';
+import MinimalPokemonCard from '../components/ui/MinimalPokemonCard';
 import Divider from '../components/ui/Divider';
 import ProgressBar from '../components/ui/ProgressBar';
 import maxStat from '../helpers';
@@ -16,7 +16,6 @@ const PokemonDetailsView = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   const [pokemonDescription] = pokemonSpecie.flavor_text_entries.filter((specie) => specie.language.name === 'en');
-  console.log(pokemonDescription);
 
   const getPokemonSpecies = () => {
     api.getPokemonSpecies(id)
@@ -49,8 +48,8 @@ const PokemonDetailsView = () => {
       {(isLoading)
         ? <div className="loader">Loading...</div>
         : (
-          <PokemonFullCard>
-            <PokemonSmallCard
+          <Card>
+            <MinimalPokemonCard
               pokemon={pokemon}
               pokemonDescription={pokemonDescription.flavor_text}
             />
@@ -70,7 +69,7 @@ const PokemonDetailsView = () => {
                   }
               </div>
             </div>
-          </PokemonFullCard>
+          </Card>
         )}
     </div>
   );
