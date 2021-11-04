@@ -63,13 +63,14 @@ nav.navbar {
   height: 30px;
   border-radius: 30px;
   border: none;
+  padding: 0;
 }
 
 .switch-background .switch-off {
   border-radius: 100%;
   width: 25px;
   height: 25px;
-  margin: 0;
+  margin: 0 auto 0 3px;
   border: none;
   transition: ease .5s;
   background-color: #c2252c;
@@ -80,7 +81,7 @@ nav.navbar {
   border-radius: 100%;
   width: 25px;
   height: 25px;
-  margin: 0 0 0 25px;
+  margin: 0 0 0 32px;
   border: none;
   transition: ease .5s;
   background-color: #c2252c;
@@ -137,6 +138,7 @@ nav.navbar {
 .autocomplete-input-field:focus-visible {
   box-shadow: 0px 1px 3px rgb(0 0 0 / 24%);
   outline: none;
+  border: none;
 }
 
 ul {
@@ -170,7 +172,8 @@ div.hidden {
 
 .pokemons-wrapper .pokemon-details img {
   max-height: none;
-  object-fit: contain;
+  object-fit: fill;
+  padding: 2px;
 }
 
 .pokemon-card-wrapper .pokemons-wrapper {
@@ -199,6 +202,10 @@ div.hidden {
   text-decoration: none;
 }
 
+p#pokemon-card-name {
+  overflow-wrap: break-word;
+}
+
 .pokemon-card-wrapper .pokemon-details img {
   max-height: 250px;
   object-fit: contain;
@@ -207,7 +214,6 @@ div.hidden {
 .pokemon-details p {
   margin: 0 5px;
   text-align: center;
-  overflow-wrap: break-word;
 }
 
 .pokemon-card-description {
@@ -340,6 +346,7 @@ div.hidden {
   width: 50%;
   display: grid;
   cursor: auto;
+  padding: 5px;
 }
 
 .pokemon-card-wrapper .pokemon-details p {

@@ -45,13 +45,17 @@
   .switch-background .switch-off {
     width: 18px;
     height: 18px;
-    margin: 0 -1px;
+    margin: 0 auto 0 3px;
   }
   
   .switch-background .switch-on {
     width: 18px;
     height: 18px;
-    margin: 0 0 0 11px;
+    margin: 0 auto 0 20px;
+  }
+
+  .progress-bar-label {
+    font-size: 12px;
   }
   
 }
