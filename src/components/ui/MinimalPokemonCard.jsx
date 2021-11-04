@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
-const PokemonSmallCard = ({
+const MinimalPokemonCard = ({
   isShiny,
   pokemon,
   pokemonDescription,
@@ -41,7 +41,7 @@ const PokemonSmallCard = ({
   </div>
 );
 
-PokemonSmallCard.propTypes = {
+MinimalPokemonCard.propTypes = {
   pokemonDescription: PropTypes.string,
   isShiny: PropTypes.bool,
   pokemon: PropTypes.shape({
@@ -56,7 +56,7 @@ PokemonSmallCard.propTypes = {
   }),
 };
 
-PokemonSmallCard.defaultProps = {
+MinimalPokemonCard.defaultProps = {
   pokemon: {
     id: 0,
     weight: 0,
@@ -73,4 +73,4 @@ PokemonSmallCard.defaultProps = {
 
 const mapStateToProps = (state) => ({ isShiny: state.isShiny });
 
-export default connect(mapStateToProps, null)(PokemonSmallCard);
+export default connect(mapStateToProps, null)(MinimalPokemonCard);
