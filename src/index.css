@@ -69,22 +69,22 @@ nav.navbar {
   border-radius: 100%;
   width: 25px;
   height: 25px;
-  margin: 0 0 0 -3px;
+  margin: 0;
   border: none;
   transition: ease .5s;
   background-color: #c2252c;
-  box-shadow: 0px 2px 3px rgba(0,0,0,0.24);
+  box-shadow: none;
 }
 
 .switch-background .switch-on {
   border-radius: 100%;
   width: 25px;
   height: 25px;
-  margin: 0 0 0 27px;
+  margin: 0 0 0 25px;
   border: none;
   transition: ease .5s;
   background-color: #c2252c;
-  box-shadow: 0px 2px 3px rgba(65, 26, 26, 0.24);
+  box-shadow: none;
 }
 
 .on {
@@ -197,7 +197,6 @@ div.hidden {
 .pokemon-details a {
   display: contents;
   text-decoration: none;
-  cursor: auto;
 }
 
 .pokemon-card-wrapper .pokemon-details img {
@@ -340,6 +339,7 @@ div.hidden {
 .pokemon-card-wrapper .pokemon-card-info {
   width: 50%;
   display: grid;
+  cursor: auto;
 }
 
 .pokemon-card-wrapper .pokemon-details p {
