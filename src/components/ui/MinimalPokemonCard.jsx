@@ -28,7 +28,7 @@ const MinimalPokemonCard = ({
           </p>
           <p id="pokemon-card-weight">
             {`Weight :
-                ${(pokemon.weight * 0.01).toFixed()}
+                ${(pokemon.weight * 0.1).toFixed()}
                 kg
                 `}
           </p>
