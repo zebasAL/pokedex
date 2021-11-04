@@ -8,14 +8,10 @@ name: Deploy to Firebase Hosting on merge
       - main
 jobs:
 
-  test:
-    needs: Test-Code
-    # The type of runner that the job will run on
+  build_and_deploy:
+    needs: test
     runs-on: ubuntu-latest
-
-    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
 
       - name: Installs Node js
@@ -25,15 +21,7 @@ jobs:
 
       - name: Install dependencies
         run: npm install 
-        
-      # - name: Test
-      # run: Test Code=true npm test
 
-  build_and_deploy:
-    needs: test
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
       - run: npm ci & npm run build
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
